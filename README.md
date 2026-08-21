@@ -11,6 +11,21 @@
 * **`Numero de Filas y Columnas`**: (891,12)
 
 * **`Columnas con valores vacios y cantidad`**:
+| Columnas    | Valores Vacios |
+|-------------|----------------|
+| PassengerId |        0       |
+| Survived    |        0       |
+| Pclass      |        0       |
+| Name        |        0       |
+| Sex         |        0       |
+| Age         |       177      |
+| SibSp       |        0       |
+| Parch       |        0       |
+| Ticket      |        0       |
+| Fare        |        0       |
+| Cabin       |       687      |
+| Embarked    |        2       |
+
 | `PassengerId` | 0 |
 | `Survived` | 0 |
 | `Pclass` | 0 |
@@ -44,14 +59,10 @@ df = df.drop("Cabin", axis=1)
 El parámetro axis=1 indica que se desea eliminar una columna. Si se utilizara axis=0, se eliminarían filas.
 
 * **`¿Cuantos pasajeros sobrevivieron vs no sobrevivieron?`**:
-Sobrevivieron --> 342
-No sobrevivieron --> 549
+| Sobrevivieron | No sobrevivieron |
+|-----------|-----------|
+|    342    |    549    |
 
-La función value_counts() de Pandas sirve para contar cuántas veces aparece cada valor diferente en una columna.
-
-En este proyecto se utilizó sobre la columna Survived para conocer cuántos pasajeros sobrevivieron y cuántos no sobrevivieron:
-
-df["Survived"].value_counts()
 
 * **`¿Qué hace value_counts()?`**:
 
@@ -60,12 +71,6 @@ La función value_counts() de Pandas sirve para contar cuántas veces aparece ca
 En este proyecto se utilizó sobre la columna Survived para conocer cuántos pasajeros sobrevivieron y cuántos no sobrevivieron:
 
 df["Survived"].value_counts()
-
-### ¿Qué hace `value_counts()`?
-
-La función `value_counts()` de Pandas sirve para **contar cuántas veces aparece cada valor diferente en una columna**.
-
-En este proyecto se utilizó sobre la columna `Survived` para conocer cuántos pasajeros sobrevivieron y cuántos no sobrevivieron:
 
 El resultado muestra:
 
